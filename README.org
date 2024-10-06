@@ -1,0 +1,89 @@
+#+title: Install Arch Linux from scratch
+
+
+* Table of Content :toc:
+- [[#post-install-arch-linux-process][Post install Arch Linux process]]
+  - [[#internet-setup][Internet setup]]
+  - [[#update-everything-just-in-case][Update everything just in case]]
+  - [[#install-packages][Install packages]]
+  - [[#user-setup][User setup]]
+  - [[#hyprland][~Hyprland~]]
+  - [[#post-hyprland-install][Post Hyprland install]]
+
+* Post install Arch Linux process
+** Internet setup
+*** Enable ~NetworkManager~ with ~systemctl~
+*** Start ~NetworkManager~ with ~systemctl~
+*** Connect to WiFi
+** Update everything just in case
+*** Add ~multilib~ to ~pacman.conf~
+*** Run ~pacman -Ssy && pacman -Sy && pacman -Syu~
+** Install packages
+*** Install the following packages
+- zellij
+- btop
+- zsh
+- kitty
+- wayland
+- xorg-wayland
+- linux-headers
+- swww
+- alsa-utils
+- alsa-plugins
+- sof-firmware (laptop only)
+- tree-sitter
+- mailutils
+- bluez
+- bluez-utils
+- bluez-obex
+- ripgrep
+- fd
+- fzf
+- pulseaudio-bluetooth
+- iproute2
+- dnsmasq
+- nerd-fonts
+- blueman
+- zsh-syntax-highlighting
+- libnotify
+** User setup
+*** Create user
+*** Add user to groups
+- ftp
+- wheel
+- uucp
+- log
+- http
+- games
+- lp
+
+*** Allow users in wheel to use ~sudo~ command
+*** Login as new user
+** ~Hyprland~
+*** Install prerequisites
+- egl-wayland
+- nvidia-open or nvidia-open-dkms
+- nvidia-utils
+- opencl-nvidia
+- lib32-nvidia-utils
+- lib32-opencl-nvidia
+- ttf-font-awesome
+*** Add modules to kernel mode
+*** Create a ~nvidia.conf~ file
+*** Rebuild ~initramfs~
+*** Install ~Hyprland~ and ~waybar~
+** Post Hyprland install
+*** Install day to day apps
+- firefox
+- dmenu
+*** Move config files to current machine
+- setup antigen
+*** Install yay
+*** Install emacs
+*** install aur packages
+- ttf-font-awesome-5
+- ttf-font-awesome-4
+- bluetuith
+- autojump
+*** Enable services
+- bluetooth.service
