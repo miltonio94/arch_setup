@@ -46,6 +46,14 @@
 - blueman
 - zsh-syntax-highlighting
 - libnotify
+- openssh
+- wayland-docs
+- waylandpp
+- wayland-utils
+- cmkae
+- dunst
+
+
 ** User setup
 *** Create user
 *** Add user to groups
@@ -85,5 +93,6 @@
 - ttf-font-awesome-4
 - bluetuith
 - autojump
-*** Enable services
+*** Enable and start services
 - bluetooth.service
+- sshd.service
